@@ -37,6 +37,6 @@ else
   "unidade desconhecida"
 
 end
-
+ teste 124
 
 puts "Valor em polegadas #{resultado}"
