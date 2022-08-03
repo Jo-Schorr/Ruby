@@ -1,4 +1,4 @@
-'''    def meters_to(unity, meters)
+    def meters_to(unity, meters)
       case unity
       when :miles
         (meters / 1000.00) / 1.609
@@ -15,7 +15,7 @@
 
 
     puts meters_to(:foot, 1)
-'''
+
 
 
 
