@@ -1,0 +1,42 @@
+Inicializando objetos
+No momento do nascimento
+
+Vamos começar de novo e definir uma nova classe.
+
+Lembre-se de como dissemos que os objetos podem ser pensados ​​como duas coisas: eles sabem coisas e podem fazer coisas .
+
+Vamos definir uma classe Person. As pessoas obviamente também sabem coisas e podem fazer coisas.
+
+Veja como definir uma classe brilhante, nova e vazia Person:
+
+class Person
+end
+Novamente, essa não é uma classe muito útil, mas podemos instanciá-la e criar uma instância de pessoa real e concreta (objeto) a partir dela:
+
+p Person.new
+Agora, antes de adicionarmos qualquer comportamento (métodos) à nossa classe, queremos fornecer alguns dados iniciais: No nosso caso, queremos que a pessoa saiba seu próprio nome.
+
+Podemos fazer assim:
+
+class Person
+  def initialize(name)
+  end
+end
+Você vê que adicionamos um método chamado initializeà classe, e esse método aceita um único argumento, que é chamado name. No momento, este método ainda está vazio. Vamos adicionar algum código a ele em breve.
+
+A parte importante para você aprender é: o método initializeé um método especial com um significado especial em Ruby:
+
+Sempre que você chamar o método newem uma classe, como em Person.new, a classe criará uma nova instância dela mesma. Ele então, internamente, chamará o método initializeno novo objeto. Fazendo isso, ele simplesmente passará todos os argumentos que você passou para new o método initialize.
+
+Então, agora podemos criar uma nova instância de pessoa chamando …
+
+Person.new("Ada")
+… e a string "Ada"será passada para o nosso initializemétodo, e acabará sendo atribuída à variável local name.
+
+O método especial initializeé chamado nos bastidores quando o objeto foi criado pelo método de classe new.
+
+Obviamente, nosso initializemétodo ainda não faz nada com a String passada. Isso mesmo. Chegaremos a isso no próximo capítulo.
+
+Para recapitular, quando você chama newa classe Persone passa a string "Ada", o método newcriará uma nova instância da classe e a chamará initialize, passando a mesma lista de argumentos, que no nosso caso é a string única "Ada".
+
+Quando criamos uma nova instância de uma classe por meio da chamada do método new dessa classe, também dizemos que “instanciamos” esse objeto: Ao chamar Person.new, instanciamos um novo objeto pessoa.
